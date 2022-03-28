@@ -40,9 +40,9 @@ webRemoteControlServer = Flask(__name__)
 def index():
     return render_template('pothole_server.html')
 
-@webRemoteControlServer.route("/result", methods=["GET", "POST") # root web site (pothole_dataPrint.html)
+@webRemoteControlServer.route("/result", methods=["GET", "POST"]) # root web site (pothole_dataPrint.html)
 def getDataFromDB(): # view DB data to web
-    if request.methd == "POST"
+    if request.method == "POST":
         address = request.form
     total_addr="";
     # pothole_server.html에서 request data가 비어있으면 
